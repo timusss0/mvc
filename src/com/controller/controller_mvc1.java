@@ -10,5 +10,6 @@ import java.sql.*;
 
 public interface controller_mvc1 {
       public void Simpan(indomi mi) throws SQLException;
-   
+      public void Ubah(indomi mi) throws SQLException;
+      
 }
