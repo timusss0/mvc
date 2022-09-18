@@ -42,6 +42,7 @@ public class indomi extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         cbjurusan = new javax.swing.JComboBox<>();
         btnSimpan = new javax.swing.JButton();
+        btnUbah = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +64,13 @@ public class indomi extends javax.swing.JFrame {
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
+            }
+        });
+
+        btnUbah.setText("UBAH");
+        btnUbah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUbahActionPerformed(evt);
             }
         });
 
@@ -95,7 +103,9 @@ public class indomi extends javax.swing.JFrame {
                                     .addComponent(txtNama)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(btnSimpan)))
+                        .addComponent(btnSimpan)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnUbah)))
                 .addContainerGap(419, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,7 +129,9 @@ public class indomi extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(cbjurusan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(btnSimpan)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSimpan)
+                    .addComponent(btnUbah))
                 .addContainerGap(195, Short.MAX_VALUE))
         );
 
@@ -147,6 +159,14 @@ public class indomi extends javax.swing.JFrame {
             Logger.getLogger(indomi.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSimpanActionPerformed
+
+    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
+        try{
+            m.Ubah(this);
+        } catch (SQLException ex) {
+            Logger.getLogger(indomi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnUbahActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,6 +205,7 @@ public class indomi extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public volatile javax.swing.JButton btnSimpan;
+    private javax.swing.JButton btnUbah;
     public javax.swing.JComboBox<String> cbjurusan;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
