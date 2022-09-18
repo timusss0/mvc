@@ -161,11 +161,11 @@ public class indomi extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSimpanActionPerformed
 
     private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
-        try{
-            m.Ubah(this);
-        } catch (SQLException ex) {
-            Logger.getLogger(indomi.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try{
+//            m.Ubah(this);
+//        } catch (SQLException ex) {
+//            Logger.getLogger(indomi.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_btnUbahActionPerformed
 
     /**
